@@ -1,0 +1,148 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="lyssal.collection.manager.element.class">Lyssal\CollectionBundle\Manager\ElementManager</parameter>
+        <parameter key="lyssal.collection.manager.element_date.class">Lyssal\CollectionBundle\Manager\ElementDateManager</parameter>
+        <parameter key="lyssal.collection.manager.element_groupe.class">Lyssal\CollectionBundle\Manager\ElementGroupeManager</parameter>
+        <parameter key="lyssal.collection.manager.element_personne.class">Lyssal\CollectionBundle\Manager\ElementPersonneManager</parameter>
+        <parameter key="lyssal.collection.manager.element_prix.class">Lyssal\CollectionBundle\Manager\ElementPrixManager</parameter>
+        <parameter key="lyssal.collection.manager.element_societe.class">Lyssal\CollectionBundle\Manager\ElementSocieteManager</parameter>
+        <parameter key="lyssal.collection.manager.element_support.class">Lyssal\CollectionBundle\Manager\ElementSupportManager</parameter>
+        <parameter key="lyssal.collection.manager.element_support_langue.class">Lyssal\CollectionBundle\Manager\ElementSupportLangueManager</parameter>
+        <parameter key="lyssal.collection.manager.genre.class">Lyssal\CollectionBundle\Manager\GenreManager</parameter>
+        <parameter key="lyssal.collection.manager.illustration.class">Lyssal\CollectionBundle\Manager\IllustrationManager</parameter>
+        <parameter key="lyssal.collection.manager.personne.class">Lyssal\CollectionBundle\Manager\PersonneManager</parameter>
+        <parameter key="lyssal.collection.manager.personne_role.class">Lyssal\CollectionBundle\Manager\PersonneRoleManager</parameter>
+        <parameter key="lyssal.collection.manager.plateforme.class">Lyssal\CollectionBundle\Manager\PlateformeManager</parameter>
+        <parameter key="lyssal.collection.manager.societe.class">Lyssal\CollectionBundle\Manager\SocieteManager</parameter>
+        <parameter key="lyssal.collection.manager.societe_role.class">Lyssal\CollectionBundle\Manager\SocieteRoleManager</parameter>
+        <parameter key="lyssal.collection.manager.support.class">Lyssal\CollectionBundle\Manager\SupportManager</parameter>
+        <parameter key="lyssal.collection.manager.support_langage_type.class">Lyssal\CollectionBundle\Manager\SupportLangageTypeManager</parameter>
+        <parameter key="lyssal.collection.manager.type.class">Lyssal\CollectionBundle\Manager\TypeManager</parameter>
+        <parameter key="lyssal.collection.manager.type.audio.class">Lyssal\CollectionBundle\Manager\Type\AudioManager</parameter>
+        <parameter key="lyssal.collection.manager.type.cuisine_recette.class">Lyssal\CollectionBundle\Manager\Type\CuisineRecetteManager</parameter>
+        <parameter key="lyssal.collection.manager.type.jeu_video.class">Lyssal\CollectionBundle\Manager\Type\JeuVideoManager</parameter>
+        <parameter key="lyssal.collection.manager.type.livre.class">Lyssal\CollectionBundle\Manager\Type\LivreManager</parameter>
+        <parameter key="lyssal.collection.manager.type.logiciel.class">Lyssal\CollectionBundle\Manager\Type\LogicielManager</parameter>
+        <parameter key="lyssal.collection.manager.type.periodique.class">Lyssal\CollectionBundle\Manager\Type\PeriodiqueManager</parameter>
+        <parameter key="lyssal.collection.manager.type.video.class">Lyssal\CollectionBundle\Manager\Type\VideoManager</parameter>
+        <parameter key="lyssal.collection.manager.univers.class">Lyssal\CollectionBundle\Manager\UniversManager</parameter>
+        <parameter key="lyssal.collection.manager.utilisateur_support.class">Lyssal\CollectionBundle\Manager\UtilisateurSupportManager</parameter>
+    </parameters>
+
+    <services>
+        <service id="lyssal.collection.manager.element" class="%lyssal.collection.manager.element.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.element.class%</argument>
+            <argument type="service" id="lyssal.collection.manager.illustration" />
+        </service>
+        <service id="lyssal.collection.manager.element_date" class="%lyssal.collection.manager.element_date.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.element_date.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.element_groupe" class="%lyssal.collection.manager.element_groupe.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.element_groupe.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.element_personne" class="%lyssal.collection.manager.element_personne.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.element_personne.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.element_prix" class="%lyssal.collection.manager.element_prix.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.element_prix.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.element_societe" class="%lyssal.collection.manager.element_societe.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.element_societe.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.element_support" class="%lyssal.collection.manager.element_support.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.element_support.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.element_support_langue" class="%lyssal.collection.manager.element_support_langue.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.element_support_langue.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.genre" class="%lyssal.collection.manager.genre.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.genre.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.illustration" class="%lyssal.collection.manager.illustration.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.illustration.class%</argument>
+            <argument>%kernel.root_dir%</argument>
+        </service>
+        <service id="lyssal.collection.manager.personne" class="%lyssal.collection.manager.personne.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.personne.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.personne_role" class="%lyssal.collection.manager.personne_role.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.personne_role.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.plateforme" class="%lyssal.collection.manager.plateforme.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.plateforme.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.societe" class="%lyssal.collection.manager.societe.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.societe.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.societe_role" class="%lyssal.collection.manager.societe_role.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.societe_role.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.support" class="%lyssal.collection.manager.support.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.support.class%</argument>
+            <argument type="service" id="security.context" />
+        </service>
+        <service id="lyssal.collection.manager.support_langage_type" class="%lyssal.collection.manager.support_langage_type.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.support_langage_type.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.type" class="%lyssal.collection.manager.type.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.type.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.type.audio" class="%lyssal.collection.manager.type.audio.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.type.audio.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.type.cuisine_recette" class="%lyssal.collection.manager.type.cuisine_recette.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.type.cuisine_recette.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.type.jeu_video" class="%lyssal.collection.manager.type.jeu_video.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.type.jeu_video.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.type.livre" class="%lyssal.collection.manager.type.livre.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.type.livre.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.type.logiciel" class="%lyssal.collection.manager.type.logiciel.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.type.logiciel.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.type.periodique" class="%lyssal.collection.manager.type.periodique.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.type.periodique.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.type.video" class="%lyssal.collection.manager.type.video.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.type.video.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.univers" class="%lyssal.collection.manager.univers.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.univers.class%</argument>
+        </service>
+        <service id="lyssal.collection.manager.utilisateur_support" class="%lyssal.collection.manager.utilisateur_support.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.collection.entity.utilisateur_support.class%</argument>
+        </service>
+    </services>
+
+</container>

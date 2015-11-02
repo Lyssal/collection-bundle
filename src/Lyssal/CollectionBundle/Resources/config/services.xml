@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <imports>
+        <import resource="manager.xml" />
+        <import resource="twig.xml" />
+        <import resource="decorator.xml" />
+        <import resource="appellation.xml" />
+        <import resource="admin.xml" />
+    </imports>
+    
+    <parameters>
+        <parameter key="lyssal.collection.entity.element.class">Lyssal\CollectionBundle\Entity\Element</parameter>
+        <parameter key="lyssal.collection.entity.element_date.class">Lyssal\CollectionBundle\Entity\ElementDate</parameter>
+        <parameter key="lyssal.collection.entity.element_groupe.class">Lyssal\CollectionBundle\Entity\ElementGroupe</parameter>
+        <parameter key="lyssal.collection.entity.element_personne.class">Lyssal\CollectionBundle\Entity\ElementPersonne</parameter>
+        <parameter key="lyssal.collection.entity.element_prix.class">Lyssal\CollectionBundle\Entity\ElementPrix</parameter>
+        <parameter key="lyssal.collection.entity.element_societe.class">Lyssal\CollectionBundle\Entity\ElementSociete</parameter>
+        <parameter key="lyssal.collection.entity.element_support.class">Lyssal\CollectionBundle\Entity\ElementSupport</parameter>
+        <parameter key="lyssal.collection.entity.element_support_langue.class">Lyssal\CollectionBundle\Entity\ElementSupportLangue</parameter>
+        <parameter key="lyssal.collection.entity.genre.class">Lyssal\CollectionBundle\Entity\Genre</parameter>
+        <parameter key="lyssal.collection.entity.illustration.class">Lyssal\CollectionBundle\Entity\Illustration</parameter>
+        <parameter key="lyssal.collection.entity.personne.class">Lyssal\CollectionBundle\Entity\Personne</parameter>
+        <parameter key="lyssal.collection.entity.personne_role.class">Lyssal\CollectionBundle\Entity\PersonneRole</parameter>
+        <parameter key="lyssal.collection.entity.plateforme.class">Lyssal\CollectionBundle\Entity\Plateforme</parameter>
+        <parameter key="lyssal.collection.entity.societe.class">Lyssal\CollectionBundle\Entity\Societe</parameter>
+        <parameter key="lyssal.collection.entity.societe_role.class">Lyssal\CollectionBundle\Entity\SocieteRole</parameter>
+        <parameter key="lyssal.collection.entity.support.class">Lyssal\CollectionBundle\Entity\Support</parameter>
+        <parameter key="lyssal.collection.entity.support_langage_type.class">Lyssal\CollectionBundle\Entity\SupportLangageType</parameter>
+        <parameter key="lyssal.collection.entity.type.class">Lyssal\CollectionBundle\Entity\Type</parameter>
+        <parameter key="lyssal.collection.entity.type.audio.class">Lyssal\CollectionBundle\Entity\Type\Audio</parameter>
+        <parameter key="lyssal.collection.entity.type.cuisine_recette.class">Lyssal\CollectionBundle\Entity\Type\CuisineRecette</parameter>
+        <parameter key="lyssal.collection.entity.type.jeu_video.class">Lyssal\CollectionBundle\Entity\Type\JeuVideo</parameter>
+        <parameter key="lyssal.collection.entity.type.livre.class">Lyssal\CollectionBundle\Entity\Type\Livre</parameter>
+        <parameter key="lyssal.collection.entity.type.logiciel.class">Lyssal\CollectionBundle\Entity\Type\Logiciel</parameter>
+        <parameter key="lyssal.collection.entity.type.periodique.class">Lyssal\CollectionBundle\Entity\Type\Periodique</parameter>
+        <parameter key="lyssal.collection.entity.type.video.class">Lyssal\CollectionBundle\Entity\Type\Video</parameter>
+        <parameter key="lyssal.collection.entity.univers.class">Lyssal\CollectionBundle\Entity\Univers</parameter>
+        <parameter key="lyssal.collection.entity.utilisateur_support.class">Lyssal\CollectionBundle\Entity\UtilisateurSupport</parameter>
+    </parameters>
+
+</container>

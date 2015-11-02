@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="lyssal.collection.decorator.element.class">Lyssal\CollectionBundle\Decorator\ElementDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.element_date.class">Lyssal\CollectionBundle\Decorator\ElementDateDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.element_groupe.class">Lyssal\CollectionBundle\Decorator\ElementGroupeDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.element_prix.class">Lyssal\CollectionBundle\Decorator\ElementPrixDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.element_support.class">Lyssal\CollectionBundle\Decorator\ElementSupportDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.illustration.class">Lyssal\CollectionBundle\Decorator\IllustrationDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.plateforme.class">Lyssal\CollectionBundle\Decorator\PlateformeDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.personne.class">Lyssal\CollectionBundle\Decorator\PersonneDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.societe.class">Lyssal\CollectionBundle\Decorator\SocieteDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.support.class">Lyssal\CollectionBundle\Decorator\SupportDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.type.class">Lyssal\CollectionBundle\Decorator\TypeDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.univers.class">Lyssal\CollectionBundle\Decorator\UniversDecorator</parameter>
+        <parameter key="lyssal.collection.decorator.utilisateur_support.class">Lyssal\CollectionBundle\Decorator\UtilisateurSupportDecorator</parameter>
+    </parameters>
+
+    <services>
+        <service id="lyssal.collection.decorator.element" class="%lyssal.collection.decorator.element.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.element_date" class="%lyssal.collection.decorator.element_date.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.element_groupe" class="%lyssal.collection.decorator.element_groupe.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.element_prix" class="%lyssal.collection.decorator.element_prix.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.element_support" class="%lyssal.collection.decorator.element_support.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.illustration" class="%lyssal.collection.decorator.illustration.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.plateforme" class="%lyssal.collection.decorator.plateforme.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.personne" class="%lyssal.collection.decorator.personne.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.societe" class="%lyssal.collection.decorator.societe.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.support" class="%lyssal.collection.decorator.support.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.type" class="%lyssal.collection.decorator.type.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.univers" class="%lyssal.collection.decorator.univers.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+        <service id="lyssal.collection.decorator.utilisateur_support" class="%lyssal.collection.decorator.utilisateur_support.class%">
+            <argument type="service" id="router" />
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="decorator_handler" />
+        </service>
+    </services>
+
+</container>

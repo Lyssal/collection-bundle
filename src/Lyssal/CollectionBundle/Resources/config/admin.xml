@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="lyssal.collection.admin.element.class">Lyssal\CollectionBundle\Admin\ElementAdmin</parameter>
+        <parameter key="lyssal.collection.admin.element_societe.class">Lyssal\CollectionBundle\Admin\Element\ElementSocieteAdmin</parameter>
+        <parameter key="lyssal.collection.admin.element_personne.class">Lyssal\CollectionBundle\Admin\Element\ElementPersonneAdmin</parameter>
+        <parameter key="lyssal.collection.admin.element_date.class">Lyssal\CollectionBundle\Admin\Element\ElementDateAdmin</parameter>
+        <parameter key="lyssal.collection.admin.element_prix.class">Lyssal\CollectionBundle\Admin\Element\ElementPrixAdmin</parameter>
+        <parameter key="lyssal.collection.admin.element_support.class">Lyssal\CollectionBundle\Admin\Element\ElementSupportAdmin</parameter>
+        <parameter key="lyssal.collection.admin.illustration.class">Lyssal\CollectionBundle\Admin\IllustrationAdmin</parameter>
+        <parameter key="lyssal.collection.admin.type.class">Lyssal\CollectionBundle\Admin\TypeAdmin</parameter>
+        <parameter key="lyssal.collection.admin.genre.class">Lyssal\CollectionBundle\Admin\GenreAdmin</parameter>
+        <parameter key="lyssal.collection.admin.univers.class">Lyssal\CollectionBundle\Admin\UniversAdmin</parameter>
+        <parameter key="lyssal.collection.admin.element_groupe.class">Lyssal\CollectionBundle\Admin\ElementGroupeAdmin</parameter>
+        <parameter key="lyssal.collection.admin.societe.class">Lyssal\CollectionBundle\Admin\SocieteAdmin</parameter>
+        <parameter key="lyssal.collection.admin.societe_role.class">Lyssal\CollectionBundle\Admin\SocieteRoleAdmin</parameter>
+        <parameter key="lyssal.collection.admin.personne.class">Lyssal\CollectionBundle\Admin\PersonneAdmin</parameter>
+        <parameter key="lyssal.collection.admin.personne_role.class">Lyssal\CollectionBundle\Admin\PersonneRoleAdmin</parameter>
+        <parameter key="lyssal.collection.admin.plateforme.class">Lyssal\CollectionBundle\Admin\PlateformeAdmin</parameter>
+        <parameter key="lyssal.collection.admin.support.class">Lyssal\CollectionBundle\Admin\SupportAdmin</parameter>
+        <parameter key="lyssal.collection.admin.support_langage_type.class">Lyssal\CollectionBundle\Admin\SupportLangageTypeAdmin</parameter>
+        <parameter key="lyssal.collection.admin.utilisateur_support.class">Lyssal\CollectionBundle\Admin\UtilisateurSupportAdmin</parameter>
+    </parameters>
+
+    <services>
+        <service id="lyssal.collection.admin.element" class="%lyssal.collection.admin.element.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Éléments" route_builder="sonata.admin.route.path_info" icon="&lt;i class='fa fa-archive'&gt;&lt;/i&gt;" />
+            <argument/>
+            <argument>%lyssal.collection.entity.element.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.element_societe" class="%lyssal.collection.admin.element_societe.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Sociétés d'éléments" show_in_dashboard="false" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.element_societe.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.element_personne" class="%lyssal.collection.admin.element_personne.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Personnes d'éléments" show_in_dashboard="false" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.element_personne.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.element_date" class="%lyssal.collection.admin.element_date.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Dates d'éléments" show_in_dashboard="false" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.element_date.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.element_prix" class="%lyssal.collection.admin.element_prix.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Prix d'éléments" show_in_dashboard="false" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.element_prix.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.element_support" class="%lyssal.collection.admin.element_support.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Supports d'éléments" show_in_dashboard="false" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.element_support.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.illustration" class="%lyssal.collection.admin.illustration.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Illustrations" show_in_dashboard="false" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.illustration.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.type" class="%lyssal.collection.admin.type.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Types" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.type.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.genre" class="%lyssal.collection.admin.genre.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Genres" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.genre.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.univers" class="%lyssal.collection.admin.univers.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Univers" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.univers.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.element_groupe" class="%lyssal.collection.admin.element_groupe.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Groupes" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.element_groupe.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.societe" class="%lyssal.collection.admin.societe.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Sociétés" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.societe.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.societe_role" class="%lyssal.collection.admin.societe_role.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Rôles de société" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.societe_role.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.personne" class="%lyssal.collection.admin.personne.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Personnes" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.personne.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.personne_role" class="%lyssal.collection.admin.personne_role.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Rôles de personne" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.personne_role.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.plateforme" class="%lyssal.collection.admin.plateforme.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Plateformes" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.plateforme.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.support" class="%lyssal.collection.admin.support.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Supports" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.support.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.utilisateur_support" class="%lyssal.collection.admin.utilisateur_support.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Supports d'utilisateur" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.utilisateur_support.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+        <service id="lyssal.collection.admin.support_langage_type" class="%lyssal.collection.admin.support_langage_type.class%">
+            <tag name="sonata.admin" manager_type="orm" group="Collections" label="Types de langage de support" route_builder="sonata.admin.route.path_info" />
+            <argument/>
+            <argument>%lyssal.collection.entity.support_langage_type.class%</argument>
+            <argument>SonataAdminBundle:CRUD</argument>
+        </service>
+    </services>
+
+</container>

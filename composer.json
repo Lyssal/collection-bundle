@@ -1,0 +1,29 @@
+{
+	"name" : "lyssal/collection-bundle",
+	"description" : "Bundle permettant de gérer toutes sortes de collections",
+	"license" : "proprietary",
+	"keywords" : [
+		"collection",
+		"bibliothèque"
+	],
+	"type" : "symfony-bundle",
+	"authors" : [{
+			"name" : "Rémi Leclerc",
+			"homepage" : "http://www.lyssal.com/"
+		}
+	],
+	"require" : {
+		"lyssal/structure-bundle" : "0.*",
+        "lyssal/geographie-bundle" : "0.*",
+        "lyssal/monnaie-bundle" : "0.*"
+	},
+	"suggest" : {
+		"lyssal/admin-bundle" : "Pour gérer LyssalCollectionBundle depuis la console administrative (basé sur SonataAdmin)",
+		"sonata-project/admin-bundle" : "Pour gérer les entités depuis la console administrative"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"Lyssal\\CollectionBundle" : "src"
+		}
+	}
+}

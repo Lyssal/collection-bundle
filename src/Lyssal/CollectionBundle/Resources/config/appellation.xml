@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="lyssal.collection.appellation.element.class">Lyssal\CollectionBundle\Appellation\ElementAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.element_date.class">Lyssal\CollectionBundle\Appellation\ElementDateAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.element_groupe.class">Lyssal\CollectionBundle\Appellation\ElementGroupeAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.element_prix.class">Lyssal\CollectionBundle\Appellation\ElementPrixAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.genre.class">Lyssal\CollectionBundle\Appellation\GenreAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.personne.class">Lyssal\CollectionBundle\Appellation\PersonneAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.societe.class">Lyssal\CollectionBundle\Appellation\SocieteAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.support.class">Lyssal\CollectionBundle\Appellation\SupportAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.type.class">Lyssal\CollectionBundle\Appellation\TypeAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.univers.class">Lyssal\CollectionBundle\Appellation\UniversAppellation</parameter>
+        <parameter key="lyssal.collection.appellation.utilisateur_support.class">Lyssal\CollectionBundle\Appellation\UtilisateurSupportAppellation</parameter>
+    </parameters>
+
+    <services>
+        <service id="lyssal.collection.appellation.element" class="%lyssal.collection.appellation.element.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.element_date" class="%lyssal.collection.appellation.element_date.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.element_groupe" class="%lyssal.collection.appellation.element_groupe.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.element_prix" class="%lyssal.collection.appellation.element_prix.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.genre" class="%lyssal.collection.appellation.genre.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.societe" class="%lyssal.collection.appellation.societe.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.personne" class="%lyssal.collection.appellation.personne.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.support" class="%lyssal.collection.appellation.support.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.type" class="%lyssal.collection.appellation.type.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.univers" class="%lyssal.collection.appellation.univers.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+        <service id="lyssal.collection.appellation.utilisateur_support" class="%lyssal.collection.appellation.utilisateur_support.class%">
+            <argument type="service" id="router" />
+            <tag name="appellation_handler" />
+        </service>
+    </services>
+
+</container>
