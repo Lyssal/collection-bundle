@@ -2,7 +2,6 @@
 namespace Lyssal\CollectionBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\ODM\PHPCR\Mapping\Annotations\String;
 
 /**
  * Élément a support.
