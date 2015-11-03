@@ -4,7 +4,7 @@
 	"license" : "proprietary",
 	"keywords" : [
 		"collection",
-		"bibliothèque"
+		"bibliotheque"
 	],
 	"type" : "symfony-bundle",
 	"authors" : [{
