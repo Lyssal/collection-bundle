@@ -65,7 +65,6 @@ class SupportManager extends Manager
     /**
      * Retourne les supports de l'utilisateur pour un type.
      * 
-     * @todo Utilisateur connecté
      * @param \Lyssal\CollectionBundle\Entity\Type $type Type
      * @return \Lyssal\CollectionBundle\Entity\Support[] Supports
      */
