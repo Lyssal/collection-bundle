@@ -146,7 +146,6 @@ class ElementAdmin extends Admin
         $sousSousDossier =array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','_');
     
         $dossier = new Filesystem();
-        $illustration = $this->getConfigurationPool()->getContainer()->get('lyssal.collection.manager.illustration')->create();
         $imageUploadDir = 'img'.DIRECTORY_SEPARATOR.'lyssal_collection'.DIRECTORY_SEPARATOR;
         
         foreach ($sousSousDossier as $caractere)
