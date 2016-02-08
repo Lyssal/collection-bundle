@@ -4,7 +4,7 @@ namespace Lyssal\CollectionBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
-use Lyssal\StructureBundle\Entity\ImageTrait;
+use Lyssal\StructureBundle\Traits\ImageTrait;
 use Lyssal\Image;
 
 /**
