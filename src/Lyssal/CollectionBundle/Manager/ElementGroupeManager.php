@@ -10,5 +10,11 @@ use Lyssal\StructureBundle\Manager\Manager;
  */
 class ElementGroupeManager extends Manager
 {
-    
+    /**
+     * {@inheritdoc}
+     */
+    public function findAll()
+    {
+        return $this->findBy(array(), array('nom' => 'ASC'));
+    }
 }
