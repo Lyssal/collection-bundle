@@ -58,6 +58,11 @@ abstract class Plateforme implements Translatable, TranslatableInterface
      * @ORM\Column(name="plateforme_icone", type="string", nullable=false, length=64)
      */
     protected $icone;
+
+    /**
+     * @var \Symfony\Component\HttpFoundation\File\File
+     */
+    protected $iconeFile;
     
     /**
      * @var \Doctrine\Common\Collections\Collection

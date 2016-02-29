@@ -65,6 +65,11 @@ abstract class Type implements Translatable, TranslatableInterface
      * @ORM\Column(name="type_icone", type="string", nullable=false, length=32)
      */
     protected $icone;
+
+    /**
+     * @var \Symfony\Component\HttpFoundation\File\File
+     */
+    protected $iconeFile;
     
     /**
      * @var string

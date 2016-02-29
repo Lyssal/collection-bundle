@@ -75,6 +75,11 @@ abstract class Societe
      * @ORM\Column(name="societe_image", type="string", nullable=true, length=128)
      */
     protected $image;
+
+    /**
+     * @var \Symfony\Component\HttpFoundation\File\File
+     */
+    protected $imageFile;
     
     /**
      * @var \Doctrine\Common\Collections\Collection
