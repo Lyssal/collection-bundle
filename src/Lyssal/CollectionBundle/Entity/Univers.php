@@ -58,6 +58,11 @@ abstract class Univers implements Translatable, TranslatableInterface
      * @ORM\Column(name="univers_icone", type="string", nullable=false, length=32)
      */
     protected $icone;
+
+    /**
+     * @var \Symfony\Component\HttpFoundation\File\File
+     */
+    protected $iconeFile;
     
     /**
      * @var \Doctrine\Common\Collections\Collection

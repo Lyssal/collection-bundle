@@ -65,6 +65,11 @@ abstract class Type implements Translatable, TranslatableInterface
      * @ORM\Column(name="type_icone", type="string", nullable=false, length=32)
      */
     protected $icone;
+
+    /**
+     * @var \Symfony\Component\HttpFoundation\File\File
+     */
+    protected $iconeFile;
     
     /**
      * @var string
@@ -74,6 +79,14 @@ abstract class Type implements Translatable, TranslatableInterface
      * @Gedmo\Translatable()
      */
     protected $elementNom;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type_description", type="string", nullable=true, length=255)
+     * @Gedmo\Translatable()
+     */
+    protected $description;
     
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -279,6 +292,29 @@ abstract class Type implements Translatable, TranslatableInterface
     public function getElementNom()
     {
         return $this->elementNom;
+    }
+    
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Type
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+    
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
     
     /**

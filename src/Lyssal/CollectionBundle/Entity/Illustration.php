@@ -58,6 +58,11 @@ abstract class Illustration
      * @ORM\Column(name="illustration_image", type="string", nullable=false, length=128)
      */
     protected $image;
+
+    /**
+     * @var \Symfony\Component\HttpFoundation\File\File
+     */
+    protected $imageFile;
     
     /**
      * @var string

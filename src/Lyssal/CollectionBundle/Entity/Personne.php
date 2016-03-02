@@ -74,6 +74,11 @@ abstract class Personne
      * @ORM\Column(name="personne_image", type="string", nullable=true, length=128)
      */
     protected $image;
+
+    /**
+     * @var \Symfony\Component\HttpFoundation\File\File
+     */
+    protected $imageFile;
     
     /**
      * @var \Doctrine\Common\Collections\Collection

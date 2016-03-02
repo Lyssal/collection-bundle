@@ -63,6 +63,7 @@ class TypeAdmin extends Admin
         $formMapper
             ->add('nom')
             ->add('couleur')
+            ->add('description')
             ->add
             (
                 'iconeFile',
@@ -85,6 +86,7 @@ class TypeAdmin extends Admin
         $showMapper
             ->add('nom')
             ->add('couleur')
+            ->add('description')
             ->add('icone')
             ->add('elementNom')
         ;
