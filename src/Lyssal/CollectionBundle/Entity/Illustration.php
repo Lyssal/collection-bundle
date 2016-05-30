@@ -467,11 +467,13 @@ abstract class Illustration
      * 
      * @return integer Largeur maximale
      */
-    private function getLargeurMaximale()
+    protected function getLargeurMaximale()
     {
-        if (null === $this->originale)
-            return self::$ORIGINALE_LARGEUR_MAXIMALE;
-        return self::$MINIATURE_LARGEUR_MAXIMALE;
+        if (null === $this->originale) {
+            return static::$ORIGINALE_LARGEUR_MAXIMALE;
+        }
+
+        return static::$MINIATURE_LARGEUR_MAXIMALE;
     }
     
     /**
@@ -479,11 +481,13 @@ abstract class Illustration
      * 
      * @return integer Hauteur maximale
      */
-    private function getHauteurMaximale()
+    protected function getHauteurMaximale()
     {
-        if (null === $this->originale)
-            return self::$ORIGINALE_HAUTEUR_MAXIMALE;
-        return self::$MINIATURE_HAUTEUR_MAXIMALE;
+        if (null === $this->originale) {
+            return static::$ORIGINALE_HAUTEUR_MAXIMALE;
+        }
+
+        return static::$MINIATURE_HAUTEUR_MAXIMALE;
     }
 
     /**
