@@ -39,7 +39,7 @@ abstract class Societe
     /**
      * @var string
      *
-     * @ORM\Column(name="societe_nom", type="string", nullable=false, length=32)
+     * @ORM\Column(name="societe_nom", type="string", nullable=false, length=64)
      * @Assert\NotBlank()
      */
     protected $nom;
@@ -47,7 +47,7 @@ abstract class Societe
     /**
      * @var string
      *
-     * @ORM\Column(name="societe_slug", length=32, unique=true)
+     * @ORM\Column(name="societe_slug", length=64, unique=true)
      * @Gedmo\Slug(fields={"nom"}, style="camel", separator="_", updatable=true)
      * @Gedmo\Translatable()
      */
